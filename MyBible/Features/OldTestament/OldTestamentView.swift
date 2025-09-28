@@ -9,7 +9,27 @@ import SwiftUI
 
 struct OldTestamentView: View {
     var body: some View {
-        Text("Hello, World!")
+        VStack(spacing: 24) {
+            Image(systemName: "book.fill")
+                .font(.system(size: 70))
+                .foregroundStyle(.brown)
+                .padding(.top, 40)
+            
+            Text("Antigo Testamento")
+                .font(.title2)
+                .fontWeight(.semibold)
+                .foregroundStyle(.primary)
+            
+            Text("Tempo da queda e da promessa,\nquando a humanidade vivia na espera pela luz.")
+                .font(.body)
+                .foregroundStyle(.secondary)
+                .multilineTextAlignment(.center)
+                .padding(.horizontal, 32)
+            
+            Spacer()
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color(.systemGroupedBackground))
     }
 }
 
