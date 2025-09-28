@@ -22,7 +22,9 @@ struct ChapterView: View {
             ForEach(viewModel.chapters, id: \.number) { chapter in
                 Section("Capítulo \(chapter.number.description)") {
                     ForEach(chapter.verses, id: \.number) { verse in
-                        Text("\(verse.number) \(verse.text)")
+                        (Text("\(verse.number) ")
+                            .fontWeight(.semibold)
+                        + Text(verse.text))
                             .font(.body)
                     }
                 }
