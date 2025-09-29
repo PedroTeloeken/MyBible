@@ -35,7 +35,8 @@ struct OldTestamentView: View {
                 
                 ForEach(viewModel.bibleBooks) { book in
                     Section {
-                        NavigationLink(destination: ChapterView(bookName: book.name, chapters: book.chapters)) {
+                        NavigationLink(destination: ChapterView(bookName: book.name, chapters: book.chapters)
+                            .toolbar(.hidden, for: .tabBar)) {
                             Text(book.name)
                                 .font(.title3)
                                 .fontWeight(.semibold)
