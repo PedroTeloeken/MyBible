@@ -14,11 +14,10 @@ struct OldTestamentView: View {
     var body: some View {
         NavigationStack {
             List {
-                VStack(spacing: 24) {
+                VStack(spacing: 18) {
                     Image(systemName: "book.fill")
                         .font(.system(size: 70))
                         .foregroundStyle(.brown)
-                        .padding(.top, 40)
                     
                     Text("Antigo Testamento")
                         .font(.title2)
@@ -31,7 +30,7 @@ struct OldTestamentView: View {
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 32)
                     
-                }
+                }.frame(maxWidth: .infinity, alignment: .center)
                 
                 ForEach(viewModel.bibleBooks) { book in
                     Section {

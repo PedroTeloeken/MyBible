@@ -7,7 +7,7 @@
 
 struct Bible: Codable {
     let oldTestament: [Book]
-    let newTestament: [Book]?
+    let newTestament: [Book]
     
     enum CodingKeys: String, CodingKey {
         case oldTestament = "antigoTestamento"
